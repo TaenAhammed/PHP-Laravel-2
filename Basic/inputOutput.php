@@ -3,7 +3,7 @@
 $x = 'taen';
 
 $stdin = fopen('php://stdin', 'r');
-$stdin = fopen('php://stdout', 'w');
+$stdout = fopen('php://stdout', 'w');
 
 fscanf(STDIN, "%s\n", $name);
 
