@@ -8,9 +8,9 @@ fscanf(STDIN, "%d\n", $n);
 
 $arr2D = [];
 
-for ($col = 0; $col < $n; $col++) {
-    for ($row = 0; $row < $n; $row++) {
-        fscanf(STDIN, "%d\n", $arr2D[$col][$row]);
+for ($row = 0; $row < $n; $row++) {
+    for ($col = 0; $col < $n; $col++) {
+        fscanf(STDIN, "%d\n", $arr2D[$row][$col]);
     }
 }
 
