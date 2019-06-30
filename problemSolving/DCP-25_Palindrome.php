@@ -7,7 +7,9 @@ fscanf(STDIN, "%s\n", $testCases);
 while ($testCases--) {
     fscanf(STDIN, "%s\n", $input);
     if ($input === strrev($input))
-        print("Yes\n");
+        $msg = 'Yes';
     else
-        print("No\n");
+        $msg = 'No';
+
+    fprintf(STDOUT, "%s\n", $msg);
 }
