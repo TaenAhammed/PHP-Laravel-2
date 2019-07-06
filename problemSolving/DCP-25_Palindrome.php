@@ -1,12 +1,14 @@
 <?php
 $stdin = fopen('php://stdin', 'r');
 $stdout = fopen('php://stdout', 'w');
+fscanf(STDIN, "%d\n", $testCases);
 
-fscanf(STDIN, "%s\n", $testCases);
+for ($i = 0; $i < $testCases; $i++) {
 
-while ($testCases--) {
-    fscanf(STDIN, "%s\n", $input);
-    if ($input === strrev($input))
+    $input = strtolower(trim(fgets(STDIN)));
+    $rev = strrev($input);
+
+    if ($input === $rev)
         $msg = 'Yes';
     else
         $msg = 'No';
