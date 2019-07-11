@@ -15,7 +15,7 @@ body {
     );
 }
 .calculator_wrapper {
-    height: 70%;
+    height: 522px;
     width: 400px;
     border: 1px solid #ddd;
     position: absolute;
@@ -23,10 +23,14 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.calculator_output {
-    height: 100px;
+.calculator_history,
+.calculator_result {
+    height: 60px;
     width: 100%;
     border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    padding: 10px 20px;
+    overflow: auto;
 }
 .calculator_input {
     font-size: 30px;
