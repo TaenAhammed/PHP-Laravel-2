@@ -4,8 +4,7 @@ CREATE DATABASE attendance_system;
 -- Employee Information Table
 CREATE TABLE employee_info(
     employeeId INT NOT NULL AUTO_INCREMENT,
-    firstName VARCHAR(255),
-    lastName VARCHAR(255),
+    Name VARCHAR(255),
     age int(3),
     PRIMARY KEY(employeeId)
 );

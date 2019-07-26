@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-primary: #f0dab5;
+    --color-secondary: #b58763;
+
+    --fold-color-black: black;
+    --fold-color-white: white;
+}
+
+.colorSecondary {
+    color: var(--color-secondary);
+}
+
+.black {
+    color: var(--fold-color-black);
+}
+
+.white {
+    color: var(--fold-color-white);
+}
+
+body {
+    background-color: #312e2b;
+    font-family: "Open Sans", sans-serif;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.chessBoard {
+    height: 720px;
+    width: 720px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background: var(--color-primary);
+}
+
+.foldsRoom {
+    height: 90px;
+    width: 90px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.foldsRoom:nth-child(even):nth-child(-n + 8),
+.foldsRoom:nth-child(odd):nth-child(n + 9):nth-child(-n + 16),
+.foldsRoom:nth-child(even):nth-child(n + 17):nth-child(-n + 24),
+.foldsRoom:nth-child(odd):nth-child(n + 25):nth-child(-n + 32),
+.foldsRoom:nth-child(even):nth-child(n + 33):nth-child(-n + 40),
+.foldsRoom:nth-child(odd):nth-child(n + 41):nth-child(-n + 48),
+.foldsRoom:nth-child(even):nth-child(n + 49):nth-child(-n + 56),
+.foldsRoom:nth-child(odd):nth-child(n + 57):nth-child(-n + 64) {
+    background: var(--color-secondary);
+}
+
+.foldChar {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+.foldNum {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.fold {
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
