@@ -47,35 +47,7 @@ class Database
         ORDER BY employee_info.employeeId";
 
         $reports = $this->conn->query($sql)->fetchAll();
-        $ids = [];
-        $names = [];
-        $infos = [];
-
-        foreach ($reports as $report) {
-            print_r($report);
-        }
-        foreach ($reports as $report) {
-            if (!in_array($report['employeeId'], $ids))
-                array_push($ids, $report['employeeId']);
-        }
-        foreach ($reports as $report) {
-            if (!in_array($report['name'], $names))
-                array_push($names, $report['name']);
-        }
-        foreach ($ids as $id) {
-            array_push($infos, ['id' => $id, 'name' => '', 'days' => 0]);
-        }
-        for ($i = 0; $i < count($names); $i++) {
-            $infos[$i]['name'] = $names[$i];
-        }
-        foreach ($reports as $report) {
-            foreach ($infos as $info) {
-                if ($report['employeeId'] === $info['id']) {
-                    $info['days']++;
-                }
-            }
-        }
-        print_r($infos);
+        print_r($reports);
     }
 
     public function __destruct()
